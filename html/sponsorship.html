@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- *******  Font Awesome Icons Link  ******* -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <!-- *******  Owl Carousel Links  ******* -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <title>Get Money</title>
+</head>
+<body>
+    <div class="page">
+        <header class="page--header">
+            <div class="container">
+                <div class="all_header">
+                    <ul class="header--logo">
+                        <li class="logo"><a href="index.html"><img src="../Img/Home img/Rectangle 7.png" alt=""></a></li>
+                    </ul>
+
+                    <ul class="header--item">
+                        <li class="header--item__list"><a href="index.html">HOME</a></li>
+                        <li class="header--item__list"><a href="sponsorship.html">SPONSORSHIP</a></li>
+                        <li class="header--item__list"><a href="contact.html">CONTACT</a></li>
+                        <li class="header--item__list"><a href="aboutus.html">ABOUT US</a></li>
+                        <li class="header--item__list--img"><a href="/sites/login.html"><i class="fa-solid fa-user"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main class="page--main">
+            <div class="container">
+                <section class="first--section">
+                    <div class="first--section__title" id="dolla">
+                        <img src="../Img/dollar16.png" alt="Alternate Text" />
+                        <div class="value" akhi="1000000">0</div>
+
+                    </div>
+                    <div><span>of dollars are sponsored</span></div>
+                    <script id="rendered-js">
+                        const counters = document.querySelectorAll('.value');
+                        const speed = 200;
+
+                        counters.forEach(counter => {
+                            const animate = () => {
+                                const value = +counter.getAttribute('akhi');
+                                const data = +counter.innerText;
+
+                                const time = value / speed;
+                                if (data < value) {
+                                    counter.innerText = Math.ceil(data + time);
+                                    setTimeout(animate, 1);
+                                } else {
+                                    counter.innerText = value;
+                                }
+
+                            }
+
+                            animate();
+                        });
+                    </script>
+                </section>
+                <span><h1>боя удалите это назуй</h1></span>
+            </div>
+        </main>
+    </div>
+    <script type="text/javascript" src="../js/script.js"></script>
+
+</body>
+</html>
